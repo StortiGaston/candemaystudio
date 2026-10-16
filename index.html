@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CandeMayStudio | Estética y cosmiatría</title>
+  <meta name="description" content="CandeMayStudio, estudio de estética y cosmiatría. Tratamientos faciales, corporales y de labios con atención personalizada en un ambiente cálido. Pedí tu turno.">
+  <meta name="theme-color" content="#FAF7F5">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="CandeMayStudio | Estética y cosmiatría">
+  <meta property="og:description" content="Un espacio para dedicarte tiempo. Tratamientos faciales, corporales y de labios con atención cercana y personalizada.">
+  <!-- TODO: imagen OG real (1200×630) en assets/img/og-image.jpg y URL absoluta del sitio -->
+  <meta property="og:image" content="assets/img/og-image.jpg">
+
+  <!-- TODO: favicon desde el logo -->
+  <link rel="icon" href="assets/img/logo/favicon.svg" type="image/svg+xml">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/contact-form.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "CandeMayStudio",
+    "description": "Estudio de estética y cosmiatría. Tratamientos faciales, corporales y de labios con atención personalizada.",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AR"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- ===== Íconos (sprite SVG) ===== -->
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14Z"/><path d="M5 19 13 11"/>
+    </symbol>
+    <symbol id="icon-branch" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+      <path d="M10 110C40 80 70 50 110 10"/>
+      <path d="M30 90c-8-10-8-22 0-30 8 8 8 20 0 30Z"/>
+      <path d="M30 90c10 8 22 8 30 0-8-8-20-8-30 0Z"/>
+      <path d="M55 65c-8-10-8-22 0-30 8 8 8 20 0 30Z"/>
+      <path d="M55 65c10 8 22 8 30 0-8-8-20-8-30 0Z"/>
+      <path d="M80 40c-6-8-6-18 0-24 6 6 6 16 0 24Z"/>
+      <path d="M80 40c8 6 18 6 24 0-6-6-16-6-24 0Z"/>
+    </symbol>
+    <symbol id="icon-user-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10" cy="7.5" r="3.5"/><path d="M3.5 20c0-3.6 2.9-6.5 6.5-6.5 1 0 2 .2 2.8.6"/>
+      <path d="M17.5 21s-3.5-2.1-3.5-4.4c0-1.1.8-1.9 1.8-1.9.7 0 1.3.4 1.7 1 .4-.6 1-1 1.7-1 1 0 1.8.8 1.8 1.9 0 2.3-3.5 4.4-3.5 4.4Z"/>
+    </symbol>
+    <symbol id="icon-candle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3c1.5 1.8 2 3 2 4a2 2 0 0 1-4 0c0-1 .5-2.2 2-4Z"/><rect x="8" y="11" width="8" height="10" rx="1.5"/><path d="M12 9v2"/>
+    </symbol>
+    <symbol id="icon-lotus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19c-2.5-2-3.5-4.5-3.5-7S10 6.5 12 5c2 1.5 3.5 4.5 3.5 7s-1 5-3.5 7Z"/>
+      <path d="M12 19c-3 0-6.5-1.5-8-5 2.2-.8 4.3-.6 5.6.3"/><path d="M12 19c3 0 6.5-1.5 8-5-2.2-.8-4.3-.6-5.6.3"/>
+    </symbol>
+    <symbol id="icon-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="9.5" r="1.5"/><path d="m21 16-5-5-8 9"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5l1.5-2 4 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2.5a9.4 9.4 0 0 0-8.1 14.2L2.5 21.5l4.9-1.3A9.4 9.4 0 1 0 12 2.5Zm0 17.2c-1.4 0-2.8-.4-4-1.1l-.3-.2-2.9.8.8-2.8-.2-.3a7.8 7.8 0 1 1 6.6 3.6Zm4.3-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.4 6.4 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3c-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.5-.3Z"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12.5 10 17l9-10"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <!-- TODO: reemplazar por el logo SVG (assets/img/logo/) cuando el cliente lo entregue -->
+      <a class="brand" href="#inicio" aria-label="CandeMayStudio, ir al inicio">
+        <span class="brand__script">CandeMay</span>
+        <span class="brand__sans">Studio</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú" data-nav-toggle>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Principal" data-nav>
+        <ul class="site-nav__list" role="list">
+          <li><a class="site-nav__link" href="#inicio">Inicio</a></li>
+          <li><a class="site-nav__link" href="#nosotras">Nosotras</a></li>
+          <li><a class="site-nav__link" href="#servicios">Servicios</a></li>
+          <li><a class="site-nav__link" href="#homecare">Homecare</a></li>
+          <li><a class="site-nav__link" href="#galeria">Galería</a></li>
+          <li><a class="site-nav__link" href="#contacto">Contacto</a></li>
+          <li class="site-nav__cta"><a class="btn btn--primary btn--small" href="#contacto">Pedí tu turno</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <span class="eyebrow">Estética &amp; cosmiatría</span>
+          <h1 class="hero__title script" id="hero-title">Un espacio para vos</h1>
+          <p class="hero__subtitle">Tratamientos pensados para tu piel, en un ambiente cálido donde dedicarte tiempo, relajarte y salir sintiéndote mejor.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contacto">Pedí tu turno</a>
+            <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+
+        <div class="hero__media reveal reveal--delay-2">
+          <!-- TODO: foto real (textura de crema o ambiente del gabinete), sin loading="lazy" -->
+          <div class="media-placeholder" role="img" aria-label="Espacio reservado para una foto del gabinete">
+            <svg aria-hidden="true"><use href="#icon-lotus"/></svg>
+          </div>
+          <svg class="hero__leaf hero__leaf--top" aria-hidden="true"><use href="#icon-branch"/></svg>
+          <svg class="hero__leaf hero__leaf--bottom" aria-hidden="true"><use href="#icon-branch"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Nosotras ===== -->
+    <section class="section section--salvia" id="nosotras" aria-labelledby="nosotras-title">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__media reveal">
+            <!-- TODO: foto real de técnica manual -->
+            <div class="media-placeholder" role="img" aria-label="Espacio reservado para una foto de técnica manual">
+              <svg aria-hidden="true"><use href="#icon-leaf"/></svg>
+            </div>
+          </div>
+
+          <div class="about__text reveal reveal--delay-2">
+            <span class="eyebrow">Nosotras</span>
+            <h2 class="section__title script" id="nosotras-title">Nuestra filosofía</h2>
+            <p class="about__quote">Queremos que cada persona que nos elija encuentre un espacio donde pueda dedicarse tiempo, sentirse cómoda y disfrutar de cuidarse.</p>
+            <p>Nos gusta acompañar a cada cliente en su experiencia, escuchando sus necesidades y ofreciendo tratamientos que se adapten a lo que busca. Creemos que la belleza va más allá de lo estético, también tiene que ver con sentirse bien con uno mismo.</p>
+            <p>Por eso, buscamos brindar una atención cercana y personalizada, en un ambiente cálido y agradable, donde cada visita sea un momento para relajarse, renovarse y salir sintiéndose mejor.</p>
+          </div>
+        </div>
+
+        <ul class="pillars" role="list">
+          <li class="pillar reveal">
+            <span class="pillar__icon" aria-hidden="true"><svg><use href="#icon-user-heart"/></svg></span>
+            <h3 class="pillar__title">Atención personalizada</h3>
+            <p class="pillar__text">Escuchamos lo que necesitás y armamos cada tratamiento a tu medida.</p>
+          </li>
+          <li class="pillar reveal reveal--delay-1">
+            <span class="pillar__icon" aria-hidden="true"><svg><use href="#icon-candle"/></svg></span>
+            <h3 class="pillar__title">Ambiente cálido</h3>
+            <p class="pillar__text">Un lugar tranquilo y cómodo, pensado para que te relajes desde que llegás.</p>
+          </li>
+          <li class="pillar reveal reveal--delay-3">
+            <span class="pillar__icon" aria-hidden="true"><svg><use href="#icon-lotus"/></svg></span>
+            <h3 class="pillar__title">Bienestar integral</h3>
+            <p class="pillar__text">Cuidar tu piel es también cuidarte a vos: sentirte bien por dentro y por fuera.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Servicios ===== -->
+    <section class="section" id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="eyebrow">Tratamientos</span>
+          <h2 class="section__title script" id="servicios-title">Nuestros servicios</h2>
+          <p class="section__lead">Protocolos faciales, corporales y de labios adaptados a lo que tu piel necesita en cada momento.</p>
+        </header>
+
+        <!-- Tabs y cards se generan desde js/services-data.js -->
+        <div class="filters" role="tablist" aria-label="Filtrar servicios por categoría" data-service-filters></div>
+        <div class="services__grid" id="services-grid" role="tabpanel" aria-live="polite" data-service-grid></div>
+      </div>
+    </section>
+
+    <!-- ===== Homecare ===== -->
+    <section class="section section--nude" id="homecare" aria-labelledby="homecare-title">
+      <div class="container homecare__inner">
+        <div class="homecare__text reveal">
+          <span class="eyebrow">Asesoramiento cosmiátrico</span>
+          <h2 class="section__title script" id="homecare-title">Homecare</h2>
+          <p class="section__lead">Lo que hacés en casa es tan importante como lo que hacemos en gabinete.</p>
+          <p>Evaluamos tu biotipo cutáneo y armamos una rutina domiciliaria personalizada con líneas de marcas profesionales, para que los resultados de tus tratamientos se mantengan y potencien.</p>
+
+          <ol class="homecare__steps" role="list">
+            <li class="homecare__step">
+              <div><strong>Evaluación</strong>Analizamos tu piel, tus hábitos y lo que querés lograr.</div>
+            </li>
+            <li class="homecare__step">
+              <div><strong>Rutina a medida</strong>Te armamos una rutina simple, con los productos justos.</div>
+            </li>
+            <li class="homecare__step">
+              <div><strong>Seguimiento</strong>Te acompañamos y ajustamos la rutina según cómo evoluciona tu piel.</div>
+            </li>
+          </ol>
+
+          <p class="eyebrow">Marcas con las que trabajamos</p>
+          <ul class="brands" role="list" data-homecare-brands></ul>
+
+          <div>
+            <a class="btn btn--primary" href="#contacto" data-servicio="homecare">Quiero asesoramiento</a>
+          </div>
+        </div>
+
+        <div class="homecare__media reveal reveal--delay-2">
+          <!-- TODO: foto real de productos con elementos orgánicos -->
+          <div class="media-placeholder" role="img" aria-label="Espacio reservado para una foto de productos homecare">
+            <svg aria-hidden="true"><use href="#icon-leaf"/></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Galería ===== -->
+    <section class="section" id="galeria" aria-labelledby="galeria-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="eyebrow">Resultados</span>
+          <h2 class="section__title script" id="galeria-title">Galería</h2>
+          <p class="section__lead">Un vistazo a nuestro espacio y al trabajo que hacemos con cada clienta.</p>
+        </header>
+
+        <!-- TODO: reemplazar placeholders por fotos reales (WebP, width/height, alt descriptivo, loading="lazy").
+             Antes/después solo con autorización de las clientas. -->
+        <div class="gallery__grid" data-gallery>
+          <button class="gallery__item reveal" type="button" data-caption="Gabinete">
+            <span class="media-placeholder" role="img" aria-label="Foto del gabinete (próximamente)"><svg aria-hidden="true"><use href="#icon-image"/></svg></span>
+          </button>
+          <button class="gallery__item reveal reveal--delay-1" type="button" data-caption="Texturas">
+            <span class="media-placeholder" role="img" aria-label="Foto de texturas (próximamente)"><svg aria-hidden="true"><use href="#icon-image"/></svg></span>
+          </button>
+          <button class="gallery__item reveal reveal--delay-2" type="button" data-caption="Tratamiento facial">
+            <span class="media-placeholder" role="img" aria-label="Foto de tratamiento facial (próximamente)"><svg aria-hidden="true"><use href="#icon-image"/></svg></span>
+          </button>
+          <button class="gallery__item reveal" type="button" data-caption="Homecare">
+            <span class="media-placeholder" role="img" aria-label="Foto de productos homecare (próximamente)"><svg aria-hidden="true"><use href="#icon-image"/></svg></span>
+          </button>
+          <button class="gallery__item reveal reveal--delay-1" type="button" data-caption="Labios">
+            <span class="media-placeholder" role="img" aria-label="Foto de tratamiento de labios (próximamente)"><svg aria-hidden="true"><use href="#icon-image"/></svg></span>
+          </button>
+          <button class="gallery__item reveal reveal--delay-2" type="button" data-caption="Resultados">
+            <span class="media-placeholder" role="img" aria-label="Foto de resultados (próximamente)"><svg aria-hidden="true"><use href="#icon-image"/></svg></span>
+          </button>
+        </div>
+      </div>
+
+      <dialog class="lightbox" aria-label="Imagen ampliada" data-lightbox>
+        <figure class="lightbox__figure">
+          <div class="lightbox__media" data-lightbox-media></div>
+          <figcaption class="lightbox__caption" data-lightbox-caption></figcaption>
+        </figure>
+        <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Imagen anterior" data-lightbox-prev>&#8249;</button>
+        <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Imagen siguiente" data-lightbox-next>&#8250;</button>
+        <button class="lightbox__close" type="button" aria-label="Cerrar" data-lightbox-close>&times;</button>
+      </dialog>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="section section--salvia" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="eyebrow">Contacto</span>
+          <h2 class="section__title script" id="contacto-title">Reservá tu momento</h2>
+          <p class="section__lead">Contanos qué estás buscando y te respondemos para coordinar tu turno.</p>
+        </header>
+
+        <div class="contact__inner">
+          <aside class="contact__info reveal" aria-label="Datos de contacto">
+            <div class="contact__media">
+              <!-- TODO: foto real del gabinete o recepción -->
+              <div class="media-placeholder" role="img" aria-label="Espacio reservado para una foto de la recepción">
+                <svg aria-hidden="true"><use href="#icon-candle"/></svg>
+              </div>
+            </div>
+
+            <!-- TODO: completar con datos reales del cliente -->
+            <ul class="contact-list" role="list">
+              <li class="contact-list__item">
+                <span class="contact-list__icon" aria-hidden="true"><svg><use href="#icon-whatsapp"/></svg></span>
+                <div>
+                  <span class="contact-list__label">WhatsApp</span>
+                  <a href="#contacto" data-whatsapp-link>A confirmar</a>
+                </div>
+              </li>
+              <li class="contact-list__item">
+                <span class="contact-list__icon" aria-hidden="true"><svg><use href="#icon-mail"/></svg></span>
+                <div>
+                  <span class="contact-list__label">Email</span>
+                  <span>A confirmar</span>
+                </div>
+              </li>
+              <li class="contact-list__item">
+                <span class="contact-list__icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                <div>
+                  <span class="contact-list__label">Dirección</span>
+                  <span>A confirmar</span>
+                </div>
+              </li>
+              <li class="contact-list__item">
+                <span class="contact-list__icon" aria-hidden="true"><svg><use href="#icon-clock"/></svg></span>
+                <div>
+                  <span class="contact-list__label">Horarios</span>
+                  <span>A confirmar</span>
+                </div>
+              </li>
+            </ul>
+          </aside>
+
+          <div class="form-card reveal reveal--delay-2">
+            <form class="form" id="contact-form" novalidate data-contact-form>
+              <p class="form__intro">Los campos marcados con <span aria-hidden="true">*</span><span class="visually-hidden">asterisco</span> son obligatorios.</p>
+
+              <div class="form__row form__row--2">
+                <div class="field">
+                  <label class="field__label" for="nombre">Nombre y apellido <span aria-hidden="true">*</span></label>
+                  <input class="field__control" id="nombre" name="nombre" type="text" autocomplete="name" required minlength="3" maxlength="80" aria-describedby="nombre-error">
+                  <p class="field__error" id="nombre-error"></p>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="telefono">Teléfono <span aria-hidden="true">*</span></label>
+                  <input class="field__control" id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+54 9 379 412-3456" aria-describedby="telefono-error">
+                  <p class="field__error" id="telefono-error"></p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="email">Correo electrónico <span aria-hidden="true">*</span></label>
+                <input class="field__control" id="email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="nombre@mail.com" aria-describedby="email-error">
+                <p class="field__error" id="email-error"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="servicio">Servicio o tratamiento de interés <span aria-hidden="true">*</span></label>
+                <select class="field__control" id="servicio" name="servicio" required aria-describedby="servicio-error">
+                  <option value="">Elegí una opción</option>
+                  <!-- Opciones generadas desde js/services-data.js -->
+                </select>
+                <p class="field__error" id="servicio-error"></p>
+              </div>
+
+              <fieldset class="field">
+                <legend>¿En qué horario te queda mejor? <span aria-hidden="true">*</span></legend>
+                <div class="choices" data-choices="horario" aria-describedby="horario-error">
+                  <div class="choice"><input type="checkbox" id="horario-manana" name="horario" value="Mañana"><label class="choice__label" for="horario-manana">Mañana</label></div>
+                  <div class="choice"><input type="checkbox" id="horario-mediodia" name="horario" value="Mediodía"><label class="choice__label" for="horario-mediodia">Mediodía</label></div>
+                  <div class="choice"><input type="checkbox" id="horario-tarde" name="horario" value="Tarde"><label class="choice__label" for="horario-tarde">Tarde</label></div>
+                  <div class="choice"><input type="checkbox" id="horario-indistinto" name="horario" value="Indistinto"><label class="choice__label" for="horario-indistinto">Indistinto</label></div>
+                </div>
+                <p class="field__error" id="horario-error"></p>
+              </fieldset>
+
+              <fieldset class="field">
+                <legend>Días preferidos <span class="field__optional">(opcional)</span></legend>
+                <div class="choices choices--small">
+                  <div class="choice"><input type="checkbox" id="dia-lun" name="dias" value="Lunes"><label class="choice__label" for="dia-lun">Lun</label></div>
+                  <div class="choice"><input type="checkbox" id="dia-mar" name="dias" value="Martes"><label class="choice__label" for="dia-mar">Mar</label></div>
+                  <div class="choice"><input type="checkbox" id="dia-mie" name="dias" value="Miércoles"><label class="choice__label" for="dia-mie">Mié</label></div>
+                  <div class="choice"><input type="checkbox" id="dia-jue" name="dias" value="Jueves"><label class="choice__label" for="dia-jue">Jue</label></div>
+                  <div class="choice"><input type="checkbox" id="dia-vie" name="dias" value="Viernes"><label class="choice__label" for="dia-vie">Vie</label></div>
+                  <div class="choice"><input type="checkbox" id="dia-sab" name="dias" value="Sábado"><label class="choice__label" for="dia-sab">Sáb</label></div>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <label class="field__label" for="mensaje">Mensaje o consulta <span class="field__optional">(opcional)</span></label>
+                <textarea class="field__control" id="mensaje" name="mensaje" maxlength="500" rows="4" placeholder="Contanos qué te gustaría mejorar o cualquier duda que tengas." aria-describedby="mensaje-counter mensaje-error"></textarea>
+                <div class="field__meta">
+                  <p class="field__error" id="mensaje-error"></p>
+                  <span class="field__counter" id="mensaje-counter" aria-live="polite" data-counter>0 / 500</span>
+                </div>
+              </div>
+
+              <!-- Honeypot anti-spam: no completar -->
+              <div class="form__hp" aria-hidden="true">
+                <label for="website">No completar este campo</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <p class="form__status" role="alert" data-form-status></p>
+
+              <button class="btn btn--primary btn--block" type="submit" data-submit>
+                <span class="btn__spinner" aria-hidden="true"></span>
+                <span data-submit-label>Enviar consulta</span>
+              </button>
+            </form>
+
+            <div class="form-success" tabindex="-1" hidden data-form-success>
+              <span class="form-success__icon" aria-hidden="true"><svg><use href="#icon-check"/></svg></span>
+              <p class="form-success__title script">¡Gracias!</p>
+              <p class="form-success__text" data-success-text></p>
+              <button class="btn btn--ghost" type="button" data-form-reset>Enviar otra consulta</button>
+            </div>
+
+            <p class="visually-hidden" aria-live="polite" data-form-live></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="brand" href="#inicio" aria-label="CandeMayStudio, volver al inicio">
+            <span class="brand__script">CandeMay</span>
+            <span class="brand__sans">Studio</span>
+          </a>
+          <p class="site-footer__tagline">Estética &amp; cosmiatría. Un espacio para vos.</p>
+        </div>
+
+        <nav aria-label="Enlaces rápidos">
+          <p class="site-footer__title">Navegación</p>
+          <ul class="site-footer__list" role="list">
+            <li><a href="#nosotras">Nosotras</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#homecare">Homecare</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- TODO: datos reales -->
+        <div>
+          <p class="site-footer__title">Visitanos</p>
+          <ul class="site-footer__list" role="list">
+            <li>Dirección a confirmar</li>
+            <li>Horarios a confirmar</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="site-footer__title">Seguinos</p>
+          <ul class="site-footer__list" role="list">
+            <!-- TODO: URL real de Instagram -->
+            <li><a href="#" data-todo-link>Instagram</a></li>
+            <li><a href="#contacto" data-whatsapp-link>WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="site-footer__bottom">© <span data-year>2026</span> CandeMayStudio. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="#contacto" aria-label="Escribinos por WhatsApp" hidden data-whatsapp-float>
+    <svg aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+  </a>
+</body>
+</html>
